@@ -1,6 +1,7 @@
 # React Web Component Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules as a web component to be injected into existing applications.
+This template provides a minimal setup to get React working in Vite as a web component to be injected into existing applications.
+See injectIndex.html to see how the bundler injects the react script into a target div and stylesheets into the react app shadow dom.
 
 Currently, two official plugins are available:
 
