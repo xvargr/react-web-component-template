@@ -1,6 +1,6 @@
-# React + TypeScript + Vite
+# React Web Component Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules as a web component to be injected into existing applications.
 
 Currently, two official plugins are available:
 
