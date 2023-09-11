@@ -5,6 +5,11 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <!-- the asset bundle is created automatically during the build process -->
+    <!-- it will include all js and css files that are created normally during vite build -->
+
+    <!-- the bundle will append script and style tags onto the document head -->
+    <!-- then, the main react application script will "move" the required styles/script into the react shadow dom  -->
     <script
       type="module"
       crossorigin="use-credentials"
@@ -30,6 +35,7 @@
     }
   </style>
   <body>
-    <div id="react-component"></div>
+    <!-- provide a target div anywhere on an existing application/page -->
+    <div id="react-web-component-target"></div>
   </body>
 </html>

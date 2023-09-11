@@ -13,7 +13,7 @@ const shadowRoot = shadowHost.attachShadow({ mode: "open" });
 (function appendCss() {
   const cssSelector = import.meta.env.DEV
     ? 'style[type="text/css"]'
-    : 'link[rel="stylesheet"][data-type="chat-stylesheet"]';
+    : 'link[rel="stylesheet"][data-type="component-stylesheet"]';
   const styleElements = document.querySelectorAll(cssSelector);
   shadowRoot.append(...styleElements);
 })();
