@@ -3,6 +3,8 @@
 This template provides a minimal setup to get React working in Vite as a web component to be injected into existing applications.
 See injectIndex.html to see how the bundler injects the react script into a target div and stylesheets into the react app shadow dom.
 
+----
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
