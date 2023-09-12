@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { MemoryRouter } from "react-router-dom";
 import App from "./App.tsx";
 import "./styles/index.scss";
 
 const target = (
-  document.getElementsByName("component-target-id")[0] as HTMLMetaElement
+  document.getElementsByName("unity-target-id")[0] as HTMLMetaElement
 )?.content;
 
 if (!target) throw new Error("No  component target specified");
@@ -26,6 +27,10 @@ const shadowRoot = shadowHost.attachShadow({ mode: "open" });
 
 ReactDOM.createRoot(shadowRoot).render(
   <React.StrictMode>
-    <App />
+    <MemoryRouter future={{ v7_startTransition: true }}>
+      <div id="unity-root">
+        <App />
+      </div>
+    </MemoryRouter>
   </React.StrictMode>
 );

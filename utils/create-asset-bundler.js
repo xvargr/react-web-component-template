@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const JS_TEMPLATE_FILE = path.join(__dirname, "./bundlerTemplateJS.js");
 const CSS_TEMPLATE_FILE = path.join(__dirname, "./bundlerTemplateCSS.js");
 const DIST_FILEPATH = path.join(__dirname, "../dist/assets");
-const BUNDLER_FILENAME = "componentBundle.js";
+const BUNDLER_FILENAME = "unityChatBundle.js";
 const BUNDLER_FILEPATH = path.join(
   __dirname,
   `../dist/assets/${BUNDLER_FILENAME}`
