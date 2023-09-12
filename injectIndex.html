@@ -5,6 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <!-- provide the target id to inject the react web component into -->
+    <meta name="component-target-id" content="react-web-component-target" />
+    <!-- use global scoped variables to pass data into the component -->
+    <script>
+      // component global variables
+      var variable = "value";
+    </script>
     <!-- the asset bundle is created automatically during the build process -->
     <!-- it will include all js and css files that are created normally during vite build -->
 
