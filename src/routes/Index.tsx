@@ -1,32 +1,21 @@
-import { useState } from "react";
-import reactLogo from "../assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useContext } from "react";
+
+import { Link } from "react-router-dom";
+import { WhatsappContext } from "../context/WhatsappContext";
 
 export default function Index() {
-  const [count, setCount] = useState(0);
+  const whatsapp = useContext(WhatsappContext);
+
+  if (!whatsapp.isConnected) {
+    return <div>connecting...</div>;
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>pages/Index.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="flex flex-col">
+      <h1>Index</h1>
+      <Link to="conversation">Conversation</Link>
+      <Link to="conversation/error">throw error in conversation</Link>
+      <Link to="404">throw 404</Link>
+    </div>
   );
 }
