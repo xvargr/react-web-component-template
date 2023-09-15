@@ -7,7 +7,15 @@
     <meta name="unity-target-id" content="unity-chat-target" />
     <script>
       // component global variables
-      var variable = "value";
+      var agent_name = "Kevin Wijaya";
+      var profile_pic = "./img/user-icon.png";
+      var socket_url = "http://192.168.100.206:4100";
+      var socket_auth = {
+        token:
+          "4646c30cd3da0b20517aaa7c543cf5d7750aa9593f95e4d432ea7de6e197e6b0",
+      };
+      var socket_custom_header = { "my-custom-header": "1234" };
+      var notification_sfx = "./script/notification.wav";
     </script>
     <title>Unity Chat</title>
   </head>
@@ -22,7 +30,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #213547;
+      background-color: #dbb774;
     }
   </style>
   <body>
