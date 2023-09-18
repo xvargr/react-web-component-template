@@ -1,27 +1,33 @@
 import { io, Socket } from "socket.io-client";
 
 export interface ISocketParams {
+  name: string;
   url: string;
   options: {
     autoConnect?: boolean;
     extraHeaders: { "my-custom-header": string };
     auth: { token: string };
   };
+  dispatches: {
+    [key: string]: React.Dispatch<
+      React.SetStateAction<{ [key: string]: boolean }>
+    >;
+    setConnection: React.Dispatch<
+      React.SetStateAction<{ [key: string]: boolean }>
+    >;
+  };
 }
 
 export class UnitySocket {
+  name: string;
   socket: Socket<ServerToClientEvents, ClientToServerEvents>;
+  // socket: Socket;
+  dispatches;
 
-  constructor({ url, options }: ISocketParams) {
+  constructor({ name, url, options, dispatches }: ISocketParams) {
+    this.name = name;
     this.socket = io(url, options);
-
-    this.socket.onAny((eventName, ...args) => {
-      console.log(eventName, ...args);
-    });
-
-    this.socket.on("connect", () => {
-      console.log("connected");
-    });
+    this.dispatches = dispatches;
 
     return this;
   }
