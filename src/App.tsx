@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Index from "./routes/Index";
-import { WhatsappProvider } from "./context/WhatsappContext";
+import { ConnectionProvider } from "./context/ConnectionContext";
 import ConversationLayout from "./layouts/ConversationLayout";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ThrowError from "./components/ThrowError";
@@ -67,9 +67,9 @@ const router = import.meta.env.DEV
 
 function App() {
   return (
-    <WhatsappProvider>
+    <ConnectionProvider>
       <RouterProvider router={router} />
-    </WhatsappProvider>
+    </ConnectionProvider>
   );
 }
 

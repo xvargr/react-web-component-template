@@ -3,11 +3,19 @@ interface ServerToClientEvents {
   noArg: () => void;
   basicEmit: (a: number, b: string, c: Buffer) => void;
   withAck: (d: string, callback: (e: number) => void) => void;
-  "whatsapp::receive_message": (data) => void;
+
+  // "whatsapp::receive_message": (data) => void;
 }
 
 interface ClientToServerEvents {
   hello: () => void;
+}
+
+interface WhatsappServerToClientEvents extends ServerToClientEvents {
+  "whatsapp::receive_message": (data) => void;
+}
+interface WhatsappClientToServerEvents extends ClientToServerEvents {
+  // "whatsapp::receive_message": (data) => void;
 }
 
 interface InterServerEvents {

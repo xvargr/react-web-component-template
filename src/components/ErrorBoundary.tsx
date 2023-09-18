@@ -21,7 +21,7 @@ export default function ErrorBoundary() {
   }
 
   return (
-    <div className="bg-red-400 text-red-100 rounded-xl shadow m-4 p-2 bg-opacity-90">
+    <div className="bg-red-500 text-red-100 rounded-xl shadow m-4 p-2 bg-opacity-90">
       <h2 className="font-semibold text-md mb-2">
         Oops, something went wrong... 😢
       </h2>

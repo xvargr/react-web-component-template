@@ -1,14 +1,13 @@
-import { useContext } from "react";
-
 import { Link } from "react-router-dom";
-import { WhatsappContext } from "../context/WhatsappContext";
+import { useContext } from "react";
+import { ConnectionContext } from "../context/ConnectionContext";
 
 export default function Index() {
-  const whatsapp = useContext(WhatsappContext);
+  const { connections, connectionStatus, allConnected } =
+    useContext(ConnectionContext);
 
-  if (!whatsapp.isConnected) {
-    return <div>connecting...</div>;
-  }
+  console.log("ws conn", connectionStatus.whatsapp);
+  // connection.connections.whatsapp.sendMessage();
 
   return (
     <div className="flex flex-col">
